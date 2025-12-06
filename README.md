@@ -1,6 +1,6 @@
 # E-Commerce Data Analysis Project
 - By: Olusesan Samuel
-- Data Source: [Here]()
+- Data Source: [Here](https://datadna.onyxdata.co.uk/challenges/november-2025-datadna-ecommerce-analytics-challenge/)
 
 # Project Overview
 This project analyzes customer behavior, product performance, and sales patterns using Power BI and Power Query. It is part of the DataDNA Dataset Challenge, where the goal is to uncover insights that support data-driven decision-making for an e-commerce business.
