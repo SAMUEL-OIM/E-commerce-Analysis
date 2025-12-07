@@ -25,6 +25,27 @@ This project analyzes customer behavior, product performance, and sales patterns
 - Formatting each column to it datatype
 <img width="2514" height="872" alt="Raw Data Image" src="https://github.com/user-attachments/assets/6e380a0e-9d91-497b-89be-0c18375c00fc" />
 
+# Data Analysis Expressions
+### The average price in each country
+- `DAX = AVERAGE(Events[unit_price_local])`
+- `Total Price with Symbol = 
+    VAR Curr = SELECTEDVALUE(Events[currency])
+    VAR Amount = [ASP]
+        RETURN
+        IF(ISBLANK(Curr),"--",
+            Curr & " " & FORMAT(Amount,"0.0")
+           )  `
+### To count the no. of customers, events, products, refunds
+- `Customer_Count = COUNT(Customers[customer_id])`
+- `No. of events = COUNT(Events[event_id])`
+- `Total_Products = COUNT(Products[product_id])`
+- `Refunds_Counts = CALCULATE(COUNTROWS(Events),Events[is_refunded] = TRUE)`
+### To calculate the sum of revenue
+- `Net_Revenue = SUM(Events[net_revenue_usd])`
+### To design the sparkline on my card
+- `Net_Revenue = SUM(Events[net_revenue_usd])`
+  
+
 # Objectives
 - Analyze customer engagement patterns
 - Identify best-selling and underperforming products
